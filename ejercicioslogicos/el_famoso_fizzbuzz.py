@@ -5,9 +5,9 @@ Escribe un programa que muestre por consola (con un print) los números de 1 a 1
 - Múltiplos de 3 y de 5 a la vez por la palabra "fizzbuzz".
 """
 
-def fizz_buzz():
+def fizz_buzz() -> int:
     for i in range(1, 101):
-        if i == 1 or 0:
+        if i < 1:
             print(1)
         if i % 3 == 0:
             print('\nfizz')
