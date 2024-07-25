@@ -7,18 +7,21 @@
 def fibbo():
     first_number = 0
     second_number = 1
-    
+    first=True
     list_fibo = []
-    #Método Iterativo (con ciclo for):
+    
+    #Método Iterativo (con ciclo while): (No vale basado en uno que me dio gpt sin while y sin append y sin bool)
     while len(list_fibo) < 50:
         temp = first_number
+        if first == True:
+            list_fibo.append(first_number)
+            first = False
         first_number = second_number
-        list_fibo.append(temp)
-        second_number = temp + second_number
+        second_number = second_number + temp
         list_fibo.append(second_number)
     
-    print(len(list_fibo))
     print(list_fibo)
+    print(len(list_fibo))
 
     #Método Recursivo:
     
