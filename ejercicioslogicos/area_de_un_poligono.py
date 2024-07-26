@@ -6,3 +6,7 @@
 # - Imprime el cálculo del área de un polígono de cada tipo.
 # 
 
+
+#Método Iterativo (con ciclo for):
+
+#Método Recursivo:

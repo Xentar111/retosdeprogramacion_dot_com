@@ -7,3 +7,7 @@
 #   imagen de 1920*1080px.
 # 
 
+
+#Método Iterativo (con ciclo for):
+
+#Método Recursivo:

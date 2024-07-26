@@ -5,6 +5,9 @@ Escribe una función que reciba dos palabras (String) y retorne verdadero o fals
 - Dos palabras exactamente iguales no son anagrama.
 """
 
+#Método Iterativo (con ciclo for):
+
+#Método Recursivo:
 def anagram(text1:str, text2:str) -> bool:
     if text1 == text2:
         return False
