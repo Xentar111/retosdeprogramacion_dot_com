@@ -12,8 +12,26 @@ def area_poligono(poligono:tuple):
     if isinstance (poligono, tuple):
         if len(poligono) > 1:
             lado_base = max(poligono)
+            lado_minimo = min(poligono)
+            
+            if len(poligono) > 2:
+                #Es un rectangulo
+                pass
+            
+            numeros_borrar = [lado_base, lado_minimo]
+            
+            lado_restante = list(poligono)
+            for lado in numeros_borrar:
+                while lado in lado_restante:
+                    lado_restante.remove(lado)
+            lado_restante = lado_restante[0]
+            #extraer_numeros = {lado_minimo, lado_base}
+            #lado_restante = tuple(x for i, x in enumerate(poligono) if i not in extraer_numeros)
+            #lado_restante = tuple(x for x in poligono not in (lado_base, lado_minimo))
             
             print(lado_base)
+            print(lado_minimo)
+            print(lado_restante)
                 
 
 if __name__ == '__main__':
