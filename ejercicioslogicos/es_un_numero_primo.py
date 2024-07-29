@@ -34,6 +34,7 @@ def numero_primo():
             print(f'{numero} - No es un numero primo')
     else:
         print(f'{numero} - No es un numero')
+    
     #Método Recursivo:
     #numero % 2 == 0
 
