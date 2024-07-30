@@ -16,25 +16,36 @@ def area_poligono(poligono:tuple):
             lado_minimo = min(poligono)
             
             if len(poligono) > 2:
-                #No es un rectangulo
                 numeros_borrar = [hipotenusa, lado_minimo]
                 
                 lado_restante = list(poligono)
                 for lado in numeros_borrar:
                     while lado in lado_restante:
                         lado_restante.remove(lado)
+                #print(type(lado_restante))
                 lado_restante = lado_restante[0]
+                
                 #extraer_numeros = {lado_minimo, hipotenusa}
                 #lado_restante = tuple(x for i, x in enumerate(poligono) if i not in extraer_numeros)
                 #lado_restante = tuple(x for x in poligono not in (hipotenusa, lado_minimo))
                 
                 area = lado_minimo * lado_restante / 2
                 
-                print(hipotenusa)
-                print(lado_minimo)
-                print(lado_restante)#L
-                print("Area de un triangulo: ", area)
+                #print(hipotenusa)
+                #print(lado_minimo)
+                #print(lado_restante)#L
+                
+                #pass
+                print("Area de un triangulo: ", int(area))
                 #print(math.sqrt(altura))
+            elif len(poligono) < 3 and len(poligono) > 1:
+                #Es un isoseles
+                lado_maximo = max(poligono)
+                lado_minimo = min(poligono)
+                area = lado_maximo * lado_minimo
+                print("Area de un Rectangulo: ", area)
+            else:
+                pass
             
         elif len(poligono) < 2:
             lado_minimo = min(poligono)
@@ -47,9 +58,10 @@ if __name__ == '__main__':
     #if poligono_elegido == 1:
     #    input("Ahora los tres lados")
     
-    triangulo_rectangulo = (10, 6, 8)#este es rectangulo
-    triangulo_equilatero = (2, 5)#este es equilatero
-    cuadrado = (5,)#este es equilatero
-    area_poligono(triangulo_rectangulo)
+    rectangulo = (10, 6, 8)#Mal entendido pense que era rectangulo triangulo
+    triangulo_equilatero = (2, 5)#Pasa a ser el rectangulo
+    cuadrado = (5,)#Este es cuadrado
+    area_poligono(rectangulo)
     area_poligono(cuadrado)
+    area_poligono(triangulo_equilatero)
 #Método Recursivo:
