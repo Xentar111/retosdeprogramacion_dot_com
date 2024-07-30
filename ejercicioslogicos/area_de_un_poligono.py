@@ -9,6 +9,7 @@
 #Método Iterativo (con ciclo for):
 import math
 def area_poligono(poligono:tuple):
+    #print(type(poligono))
     if isinstance (poligono, tuple):
         if len(poligono) > 1:
             hipotenusa = max(poligono)
@@ -32,11 +33,14 @@ def area_poligono(poligono:tuple):
                 print(hipotenusa)
                 print(lado_minimo)
                 print(lado_restante)#L
-                print(area)
+                print("Area de un triangulo: ", area)
                 #print(math.sqrt(altura))
             
-            
-            
+        elif len(poligono) < 2:
+            lado_minimo = min(poligono)
+            area = lado_minimo  **2
+            print("Area de un cuadrado: ", area)
+                
 
 if __name__ == '__main__':
     #poligono_elegido = input("Ingresa el poligono que deseas: 1.Triangulo, 2.Cuadrado, 3.Rectangulo ")
@@ -45,6 +49,7 @@ if __name__ == '__main__':
     
     triangulo_rectangulo = (10, 6, 8)#este es rectangulo
     triangulo_equilatero = (2, 5)#este es equilatero
-    cuadrado = (5)#este es equilatero
+    cuadrado = (5,)#este es equilatero
     area_poligono(triangulo_rectangulo)
+    area_poligono(cuadrado)
 #Método Recursivo:
