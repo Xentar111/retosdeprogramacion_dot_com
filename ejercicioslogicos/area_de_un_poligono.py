@@ -36,6 +36,7 @@ def area_poligono(poligono:tuple):
                 #print(math.sqrt(altura))
             
             
+            
 
 if __name__ == '__main__':
     #poligono_elegido = input("Ingresa el poligono que deseas: 1.Triangulo, 2.Cuadrado, 3.Rectangulo ")
