@@ -64,4 +64,5 @@ if __name__ == '__main__':
     area_poligono(rectangulo)
     area_poligono(cuadrado)
     area_poligono(triangulo_equilatero)
+
 #Método Recursivo:

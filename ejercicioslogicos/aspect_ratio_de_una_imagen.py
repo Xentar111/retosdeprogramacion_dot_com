@@ -7,7 +7,10 @@
 #   imagen de 1920*1080px.
 # 
 
-
 #Método Iterativo (con ciclo for):
+def calculate_heigh_weight(image):
+    pass
 
+def aspect_ratio_imagen(imagen):
+    imagen
 #Método Recursivo:

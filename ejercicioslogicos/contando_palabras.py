@@ -9,5 +9,12 @@
 
 
 #Método Iterativo (con ciclo for):
+texto = 'Hol[a] como \{estas\}.|\\'
+def count_string(word_to_count:str):
+    word_lower = word_to_count.lower().split()
+    print(word_lower)
+    word_clean = [x for x in word_lower if not './\\{}[]']
+    print(word_clean)
 
+count_string(texto)
 #Método Recursivo:
